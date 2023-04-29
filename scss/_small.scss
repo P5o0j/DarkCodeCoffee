@@ -10,11 +10,14 @@ html {
 }
 body {
   font-family: "Orbitron", sans-serif;
-  font-family: "Quantico", sans-serif;
+  // font-family: "Quantico", sans-serif;
   background-color: black;
   color: white;
-  //   font-size: x-large;
   margin: 0 10%;
+  letter-spacing: 2px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .logo {
@@ -34,7 +37,8 @@ button#hamburgerBtn {
 
 nav {
   background-color: $primaryColor;
-  font-family: "Stick", cursive;
+  width: 100%;
+  border: 1px;
 }
 
 nav ul {
@@ -72,6 +76,23 @@ nav ul {
   display: none;
 }
 
+main {
+  flex-direction: column;
+}
+
+.title {
+  width: 100%;
+  float: left;
+}
+
+.line-break {
+  margin: 0 auto;
+}
+
+.beans {
+  height: 30px;
+}
+
 // DIV ANIMATION
 .showMe,
 .showMe2,
@@ -81,11 +102,12 @@ nav ul {
   width: 60%;
   border-radius: 20px;
   animation-fill-mode: forwards;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 .showMe {
   animation-delay: 2s;
+  float: left;
 }
 .showMe:hover,
 .showMe2:hover,
@@ -111,4 +133,8 @@ nav ul {
   100% {
     opacity: 1;
   }
+}
+
+.footer-container {
+  margin-top: auto;
 }
