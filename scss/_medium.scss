@@ -1,0 +1,29 @@
+.logo {
+  width: 350px;
+}
+
+/***** NAVIGATION *****/
+nav {
+  width: 100%;
+}
+nav button {
+  display: none;
+}
+
+nav ul {
+  display: block;
+}
+
+nav li {
+  width: 25%;
+  float: left;
+}
+nav li.active {
+  background-color: rgb(0, 0, 0);
+  font-size: 125%;
+}
+nav a:hover {
+  background-color: rgb(0, 0, 0);
+  box-shadow: 5px 5px 3px #888888;
+  border-radius: 10px;
+}
