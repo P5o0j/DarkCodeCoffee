@@ -86,28 +86,40 @@ main {
 }
 
 .line-break {
-  margin: 0 auto;
+  text-align: center;
 }
 
 .beans {
   height: 30px;
 }
 
+.row {
+  width: 100%;
+}
+.social-icon {
+  height: 50px;
+}
+.socials {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 // DIV ANIMATION
 .showMe,
 .showMe2,
 .showMe3 {
-  animation: fadeIn 10s;
-  opacity: 0;
-  width: 60%;
+  // animation: fadeIn 10s;
+  // opacity: 0;
+
   border-radius: 20px;
-  animation-fill-mode: forwards;
+  // animation-fill-mode: forwards;
   padding: 10px 0;
 }
 
 .showMe {
-  animation-delay: 2s;
+  // animation-delay: 2s;
   float: left;
+  margin-right: 40%;
 }
 .showMe:hover,
 .showMe2:hover,
@@ -116,25 +128,27 @@ main {
 }
 .showMe2 {
   text-align: right;
-  animation-delay: 7s;
+  // animation-delay: 7s;
   position: relative;
   float: right;
+  margin-left: 40%;
 }
 .showMe3 {
-  animation-delay: 10s;
+  // animation-delay: 10s;
   float: left;
+  margin-right: 40%;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
+// @keyframes fadeIn {
+//   0% {
+//     opacity: 0;
+//   }
 
-  100% {
-    opacity: 1;
-  }
-}
+//   100% {
+//     opacity: 1;
+//   }
+// }
 
-.footer-container {
-  margin-top: auto;
-}
+// .footer-container {
+//   margin-top: auto;
+// }
