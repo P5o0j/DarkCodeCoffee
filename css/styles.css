@@ -388,17 +388,23 @@ main {
 
 .socials {
   display: flex;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  padding: 10px 0; }
 
 .showMe,
 .showMe2,
 .showMe3 {
+  padding: 10px;
+  animation: fadeIn 10s;
+  opacity: 0;
   border-radius: 20px;
+  animation-fill-mode: forwards;
   padding: 10px 0; }
 
 .showMe {
+  animation-delay: 2s;
   float: left;
-  margin-right: 40%; }
+  margin-right: 20%; }
 
 .showMe:hover,
 .showMe2:hover,
@@ -407,13 +413,23 @@ main {
 
 .showMe2 {
   text-align: right;
+  animation-delay: 7s;
   position: relative;
   float: right;
-  margin-left: 40%; }
+  margin-left: 20%; }
 
 .showMe3 {
+  animation-delay: 10s;
   float: left;
-  margin-right: 40%; }
+  margin-right: 20%; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+.footer-container {
+  margin-top: auto; }
 
 @media only screen and (min-width: 768px) {
   .logo {
@@ -437,7 +453,14 @@ main {
   nav a:hover {
     background-color: black;
     box-shadow: 1px 1px 5px #888888;
-    border-radius: 10px; } }
+    border-radius: 10px; }
+
+  .showMe,
+  .showMe3 {
+    margin-right: 40%; }
+
+  .showMe2 {
+    margin-left: 40%; } }
 /* end of media query */
 /* end of media query */
 
