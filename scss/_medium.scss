@@ -33,3 +33,33 @@ nav a:hover {
 .showMe2 {
   margin-left: 40%;
 }
+
+/* PRODUCT CARDS */
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+  margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the card */
+.popup-product-image {
+  text-align: center;
+  height: 400px;
+}
+.popup {
+  overflow-y: scroll !important;
+  max-height: 800px;
+}
