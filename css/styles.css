@@ -480,7 +480,7 @@ main {
   background-color: #000000;
   border: 1px solid #ffffff;
   border-radius: 7px;
-  height: 450px; }
+  min-height: 450px; }
 
 .card:hover {
   box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
@@ -535,7 +535,7 @@ main {
   padding: 20px;
   background: #000000;
   border-radius: 5px;
-  width: 50%;
+  width: 90%;
   position: relative;
   transition: all 5s ease-in-out;
   color: #ffffff;
@@ -603,6 +603,9 @@ main {
     width: 50%;
     padding: 0 10px; }
 
+  .card {
+    height: 450px; }
+
   /* Remove extra left and right margins, due to padding in columns */
   .row {
     margin: 0 -5px; }
@@ -620,7 +623,8 @@ main {
 
   .popup {
     overflow-y: scroll !important;
-    max-height: 800px; } }
+    max-height: 800px;
+    width: 75%; } }
 /* end of media query */
 @media only screen and (min-width: 1140px) {
   .footer-one,
@@ -650,7 +654,9 @@ main {
     display: table;
     clear: both; }
 
-  /* Style the card */ }
+  /* Style the card */
+  .popup {
+    width: 50%; } }
 /* end of media query */
 
 /*# sourceMappingURL=styles.css.map */
