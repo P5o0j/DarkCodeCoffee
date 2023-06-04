@@ -143,6 +143,15 @@ main {
   }
 }
 
+//CONTACT FORM
+fieldset {
+  min-width: 100%;
+  border-radius: 15px;
+}
+textarea {
+  max-width: 100%;
+}
+
 // FOOTER
 .footer-container {
   margin-top: auto;

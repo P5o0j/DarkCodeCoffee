@@ -421,6 +421,13 @@ main {
     opacity: 0; }
   100% {
     opacity: 1; } }
+fieldset {
+  min-width: 100%;
+  border-radius: 15px; }
+
+textarea {
+  max-width: 100%; }
+
 .footer-container {
   margin-top: auto;
   display: flex;
@@ -656,7 +663,10 @@ main {
 
   /* Style the card */
   .popup {
-    width: 50%; } }
+    width: 50%; }
+
+  form {
+    max-width: 50%; } }
 /* end of media query */
 
 /*# sourceMappingURL=styles.css.map */
