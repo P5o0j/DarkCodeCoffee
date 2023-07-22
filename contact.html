@@ -188,10 +188,56 @@
               <button type="button" class="address-next">Next</button>
             </fieldset>
           </div>
+
           <!-- YOUR ORDER  -->
           <div class="form-row1">
             <fieldset class="yourOrder" id="yourOrder">
               <legend>Choose Product</legend>
+              <p>
+                <label for="coffeeItem"
+                  >Choose your coffee:<br />
+                  <select name="coffeeItem" id="coffeeItem">
+                    <option value="dcc011">404</option>
+                    <option value="dcc009">Black Hat</option>
+                    <option value="dcc006">Bug Fixing</option>
+                    <option value="dcc008">Corrupted Database</option>
+                    <option value="dcc005">Cybersecurity</option>
+                    <option value="dcc013">Data Breach</option>
+                    <option value="dcc012">DDoS</option>
+                    <option value="dcc003">Firewall</option>
+                    <option value="dcc007">Pen Testing</option>
+                    <option value="dcc010">Ransomware</option>
+                    <option value="dcc004">Server Meltdown</option>
+                    <option value="dcc001">Source Code</option>
+                    <option value="dcc002">White Hat</option>
+                  </select></label
+                ><br />
+              </p>
+              <p>
+                <label for="coffeeSize">
+                  Weight:<br />
+                  <input type="radio" name="weight250" id="weight250" />
+                  <label for="weight250">250g</label>
+                  <input type="radio" name="weight500" id="weight500" />
+                  <label for="weight500">500g</label>
+                  <input type="radio" name="weight1k" id="weight1k" />
+                  <label for="weight1k">1000g</label>
+                </label>
+              </p>
+              <p>
+                <label for="groundStyle"
+                  >Ground Style: <br />
+
+                  <input type="range" id="tempB" name="temp" list="values" />
+                  <datalist id="values">
+                    <img
+                      src="./product-images/404Bag.jpg"
+                      width="40"
+                      value="bean"
+                    />
+                  </datalist>
+                </label>
+              </p>
             </fieldset>
             <fieldset class="submitBox" id="submitBox">
               <legend>Your Order</legend>
