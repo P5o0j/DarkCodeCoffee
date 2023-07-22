@@ -422,7 +422,7 @@ main {
   100% {
     opacity: 1; } }
 fieldset {
-  min-width: 100%;
+  width: 100%;
   border-radius: 15px; }
 
 textarea {
@@ -665,8 +665,28 @@ textarea {
   .popup {
     width: 50%; }
 
-  form {
-    max-width: 50%; } }
+  .form-row1,
+  .form-row2 {
+    display: flex;
+    justify-content: space-around; }
+
+  .address,
+  .submitBox {
+    text-align: right; }
+
+  fieldset {
+    height: 380px;
+    width: 49%;
+    position: relative;
+    padding: 15px; }
+
+  input[type="text"] {
+    width: 75%; }
+
+  .submitBox > button {
+    position: absolute;
+    bottom: 15px;
+    right: 15px; } }
 /* end of media query */
 
 /*# sourceMappingURL=styles.css.map */

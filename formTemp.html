@@ -78,129 +78,134 @@
     </nav>
 
     <main>
-      <div class="form">
+      <div class="forms">
         <!-- CONTACT FORM -->
         <form id="myForm" method="POST" enctype="text/plain" name="FormData">
-          <div class="form-row1">
-            <fieldset class="contactForm" id="contactForm">
-              <legend>Contact Us</legend>
-              <p>
-                <label for="name"
-                  >Name<br />
-                  <input
-                    type="name"
-                    name="name"
-                    id="name"
-                    required
-                    minlength="3"
-                    maxlength="35"
-                /></label>
-              </p>
-              <p>
-                <label for="phone"
-                  >Phone Number<br />
-                  <input type="tel" id="phone" name="phone"
-                /></label>
-              </p>
-              <p>
-                <label for="email"
-                  >Email Address<br />
-                  <input type="email" name="email" id="email" required
-                /></label>
-              </p>
-              <input type="hidden" name="source" value="ContactForm" />
-              <p>
-                <label for="message"
-                  >Message: <br />
-                  <textarea
-                    cols="30"
-                    rows="4"
-                    name="message"
-                    id="message"
-                    required
-                  ></textarea>
-                </label>
-              </p>
+          <fieldset>
+            <legend>Contact Us</legend>
 
-              <button type="submit">Send</button>
-              <button type="reset">Reset</button>
-            </fieldset>
-            <!-- ADDRESS FORM -->
-            <fieldset class="address" id="address">
-              <legend>Address</legend>
-              <p>
-                <label for="address"
-                  >Address<br />
-                  <input
-                    type="text"
-                    name="address"
-                    id="add1"
-                    required
-                    minlength="3"
-                    maxlength="35"
-                /></label>
-              </p>
-              <p>
-                <label for="address2"
-                  >Address<br />
-                  <input type="text" name="address2" id="add2"
-                /></label>
-              </p>
-              <p>
-                <label for="city"
-                  >City<br />
-                  <input
-                    type="text"
-                    name="city"
-                    id="city"
-                    required
-                    minlength="2"
-                    maxlength="35"
-                /></label>
-              </p>
-              <input type="hidden" name="source" value="ContactForm" />
-              <p>
-                <label for="postcode"
-                  >Post Code<br />
-                  <input
-                    type="text"
-                    name="postcode"
-                    id="postcode"
-                    required
-                    minlength="2"
-                    maxlength="35"
-                /></label>
-              </p>
-              <p>
-                <label for="country"
-                  >Country<br />
-                  <input
-                    type="text"
-                    name="country"
-                    id="country"
-                    required
-                    minlength="2"
-                    maxlength="35"
-                /></label>
-              </p>
+            <p>
+              <label for="name"
+                >Name<br />
+                <input
+                  type="name"
+                  name="name"
+                  id="name"
+                  required
+                  minlength="3"
+                  maxlength="35"
+              /></label>
+            </p>
+            <p>
+              <label for="phone"
+                >Phone Number<br />
+                <input type="tel" id="phone" name="phone"
+              /></label>
+            </p>
+            <p>
+              <label for="email"
+                >Email Address<br />
+                <input type="email" name="email" id="email" required
+              /></label>
+            </p>
+            <input type="hidden" name="source" value="ContactForm" />
+            <p>
+              <label for="message"
+                >Message: <br />
+                <textarea
+                  cols="40"
+                  rows="4"
+                  name="message"
+                  id="message"
+                  required
+                ></textarea>
+              </label>
+            </p>
 
-              <button type="reset">Reset</button>
-              <button type="button" class="address-next">Next</button>
-            </fieldset>
-          </div>
-          <!-- YOUR ORDER  -->
-          <div class="form-row1">
-            <fieldset class="yourOrder" id="yourOrder">
-              <legend>Choose Product</legend>
-            </fieldset>
-            <fieldset class="submitBox" id="submitBox">
-              <legend>Your Order</legend>
-              <p>Your order:</p>
-              <button type="submit" class="orderSubmit-btn">
-                Submit Order
-              </button>
-            </fieldset>
-          </div>
+            <button type="submit">Send</button>
+            <button type="reset">Reset</button>
+          </fieldset>
+        </form>
+        <!-- ORDER FORM -->
+        <form id="orderForm" method="POST" enctype="text/plain" name="FormData">
+          <fieldset class="orderForm">
+            <legend>Order Form</legend>
+            <p>
+              <label for="address"
+                >Address<br />
+                <input
+                  type="text"
+                  name="address"
+                  id="add1"
+                  required
+                  minlength="3"
+                  maxlength="35"
+              /></label>
+            </p>
+            <p>
+              <label for="address2"
+                >Address<br />
+                <input type="text" name="address2" id="add2"
+              /></label>
+            </p>
+            <p>
+              <label for="city"
+                >City<br />
+                <input
+                  type="text"
+                  name="city"
+                  id="city"
+                  required
+                  minlength="2"
+                  maxlength="35"
+              /></label>
+            </p>
+            <input type="hidden" name="source" value="ContactForm" />
+            <p>
+              <label for="postcode"
+                >Post Code<br />
+                <input
+                  type="text"
+                  name="postcode"
+                  id="postcode"
+                  required
+                  minlength="2"
+                  maxlength="35"
+              /></label>
+            </p>
+            <p>
+              <label for="country"
+                >Country<br />
+                <input
+                  type="text"
+                  name="country"
+                  id="country"
+                  required
+                  minlength="2"
+                  maxlength="35"
+              /></label>
+            </p>
+
+            <button type="reset">Reset</button>
+            <button type="button">Next</button>
+          </fieldset>
+        </form>
+        <!-- YOUR ORDER  -->
+      </div>
+      <div>
+        <form
+          id="yourOrder"
+          method="POST"
+          enctype="text/plain"
+          name="FormData"
+          class="yourOrder"
+        >
+          <fieldset class="yourOrder">
+            <legend>Your Order</legend>
+            <p>Your order:</p>
+            <button type="submit" class="orderSubmit">Submit Order</button>
+          </fieldset>
+          <fieldset></fieldset>
         </form>
       </div>
     </main>

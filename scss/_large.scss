@@ -36,6 +36,34 @@
 }
 
 //CONTACT FORM
-form {
-  max-width: 50%;
+.form-row1,
+.form-row2 {
+  display: flex;
+  justify-content: space-around;
 }
+.address,
+.submitBox {
+  text-align: right;
+}
+fieldset {
+  height: 380px;
+  width: 49%;
+  position: relative;
+  padding: 15px;
+}
+input[type="text"] {
+  width: 75%;
+}
+// .submitBox {
+//   position: relative;
+// }
+
+.submitBox > button {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+// .yourOrder > button {
+//   text-align: right;
+// }
