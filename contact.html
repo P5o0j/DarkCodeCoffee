@@ -216,28 +216,59 @@
               <p>
                 <label for="coffeeSize">
                   Weight:<br />
-                  <input type="radio" name="weight250" id="weight250" />
+                  <input
+                    type="radio"
+                    name="weight"
+                    id="weight250"
+                    value="250"
+                  />
                   <label for="weight250">250g</label>
-                  <input type="radio" name="weight500" id="weight500" />
+                  <input
+                    type="radio"
+                    name="weight"
+                    id="weight500"
+                    value="500"
+                  />
                   <label for="weight500">500g</label>
-                  <input type="radio" name="weight1k" id="weight1k" />
+                  <input
+                    type="radio"
+                    name="weight"
+                    id="weight1k"
+                    value="1000"
+                  />
                   <label for="weight1k">1000g</label>
                 </label>
               </p>
               <p>
-                <label for="groundStyle"
-                  >Ground Style: <br />
-
-                  <input type="range" id="tempB" name="temp" list="values" />
-                  <datalist id="values">
-                    <img
-                      src="./product-images/404Bag.jpg"
-                      width="40"
-                      value="bean"
-                    />
-                  </datalist>
-                </label>
+                <label for="groundStyle">Ground Style: <br /> </label>
               </p>
+
+              <div class="ground-style">
+                <input
+                  type="radio"
+                  name="ground"
+                  id="beans"
+                  value="beans"
+                  class="ground"
+                />
+                <label for="beans"
+                  ><img src="./product-images/404Bag.jpg" alt="404" width="100"
+                /></label>
+
+                <input
+                  type="radio"
+                  name="ground"
+                  id="mocca"
+                  value="mocca"
+                  class="ground"
+                />
+                <label for="mocca"
+                  ><img
+                    src="./product-images/DDoSBag.jpg"
+                    alt="DDoS"
+                    width="100"
+                /></label>
+              </div>
             </fieldset>
             <fieldset class="submitBox" id="submitBox">
               <legend>Your Order</legend>
