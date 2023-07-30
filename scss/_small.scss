@@ -99,6 +99,7 @@ main {
 }
 
 // DIV ANIMATION
+
 .showMe,
 .showMe2,
 .showMe3 {
@@ -112,6 +113,7 @@ main {
 
 .showMe {
   animation-delay: 2s;
+
   float: left;
   margin-right: 20%;
 }
@@ -344,24 +346,25 @@ input[type="range"] {
 .ground-style label,
 .ground-style input {
   cursor: pointer;
-  // display: block;
-  // position: absolute;
-  // top: 0;
-  // left: 0;
-  // right: 0;
-  // bottom: 0;
+}
+.ground-img {
+  width: 30px;
 }
 .ground-style input[type="radio"] {
-  opacity: 0.011;
+  opacity: 0.5;
   z-index: 100;
 }
 
 .ground-style input[type="radio"]:checked + label {
-  background: #ffffff;
+  outline: 1px solid #ffffff;
 }
 
 .ground-style label {
   cursor: pointer;
   z-index: 90;
   line-height: 1.8em;
+}
+
+.hide {
+  display: none;
 }

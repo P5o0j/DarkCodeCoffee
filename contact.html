@@ -81,7 +81,7 @@
       <div class="form">
         <!-- CONTACT FORM -->
         <form id="myForm" method="POST" enctype="text/plain" name="FormData">
-          <div class="form-row1">
+          <div class="form-row1" id="form-row1">
             <fieldset class="contactForm" id="contactForm">
               <legend>Contact Us</legend>
               <p>
@@ -113,7 +113,7 @@
                 <label for="message"
                   >Message: <br />
                   <textarea
-                    cols="30"
+                    cols="25"
                     rows="4"
                     name="message"
                     id="message"
@@ -122,75 +122,14 @@
                 </label>
               </p>
 
-              <button type="submit">Send</button>
-              <button type="reset">Reset</button>
-            </fieldset>
-            <!-- ADDRESS FORM -->
-            <fieldset class="address" id="address">
-              <legend>Address</legend>
-              <p>
-                <label for="address"
-                  >Address<br />
-                  <input
-                    type="text"
-                    name="address"
-                    id="add1"
-                    required
-                    minlength="3"
-                    maxlength="35"
-                /></label>
-              </p>
-              <p>
-                <label for="address2"
-                  >Address<br />
-                  <input type="text" name="address2" id="add2"
-                /></label>
-              </p>
-              <p>
-                <label for="city"
-                  >City<br />
-                  <input
-                    type="text"
-                    name="city"
-                    id="city"
-                    required
-                    minlength="2"
-                    maxlength="35"
-                /></label>
-              </p>
-              <input type="hidden" name="source" value="ContactForm" />
-              <p>
-                <label for="postcode"
-                  >Post Code<br />
-                  <input
-                    type="text"
-                    name="postcode"
-                    id="postcode"
-                    required
-                    minlength="2"
-                    maxlength="35"
-                /></label>
-              </p>
-              <p>
-                <label for="country"
-                  >Country<br />
-                  <input
-                    type="text"
-                    name="country"
-                    id="country"
-                    required
-                    minlength="2"
-                    maxlength="35"
-                /></label>
-              </p>
-
-              <button type="reset">Reset</button>
-              <button type="button" class="address-next">Next</button>
+              <button type="reset" id="messageReset">Reset</button>
+              <button type="submit" id="messageSend">Send</button>
+              <button id="orderBtn">Order</button>
             </fieldset>
           </div>
 
-          <!-- YOUR ORDER  -->
-          <div class="form-row1">
+          <!-- CHOOSE PRODUCT  -->
+          <div class="form-row1" id="form-row2">
             <fieldset class="yourOrder" id="yourOrder">
               <legend>Choose Product</legend>
               <p>
@@ -241,7 +180,7 @@
                 </label>
               </p>
               <p>
-                <label for="groundStyle">Ground Style: <br /> </label>
+                <label for="groundStyle">Grind Style: <br /> </label>
               </p>
 
               <div class="ground-style">
@@ -252,29 +191,75 @@
                   value="beans"
                   class="ground"
                 />
-                <label for="beans"
-                  ><img src="./product-images/404Bag.jpg" alt="404" width="100"
+                <label for="beans" title="Roasted coffee beans"
+                  ><img
+                    src="./img/coffee-beans.png"
+                    alt="Roasted coffee beans"
+                    class="ground-img"
                 /></label>
 
                 <input
                   type="radio"
                   name="ground"
-                  id="mocca"
-                  value="mocca"
+                  id="espresso"
+                  value="espresso"
                   class="ground"
                 />
-                <label for="mocca"
+                <label for="espresso" title="Ground for espresso"
                   ><img
-                    src="./product-images/DDoSBag.jpg"
-                    alt="DDoS"
-                    width="100"
+                    src="./img/coffee-machine.png"
+                    alt="Ground for espresso"
+                    class="ground-img"
                 /></label>
+                <input
+                  type="radio"
+                  name="ground"
+                  id="pods"
+                  value="pods"
+                  class="ground"
+                />
+                <label for="pods" title="Ground for pods"
+                  ><img
+                    src="./img/pod.png"
+                    alt="Ground for pods"
+                    class="ground-img"
+                /></label>
+                <input
+                  type="radio"
+                  name="ground"
+                  id="aeropress"
+                  value="aeropress"
+                  class="ground"
+                />
+                <label for="aeropress" title="Ground for aeropress"
+                  ><img
+                    src="./img/drip-glass.png"
+                    alt="Ground for aeropress"
+                    class="ground-img"
+                /></label>
+                <input
+                  type="radio"
+                  name="ground"
+                  id="cafetiere"
+                  value="cafetiere"
+                  class="ground"
+                />
+                <label for="cafetiere" title="Ground for cafetiere"
+                  ><img
+                    src="./img/french-press.png"
+                    alt="Ground for cafetiere"
+                    class="ground-img"
+                /></label>
+              </div>
+              <div class="orderSubmit-btn">
+                <button type="reset">Reset</button>
+                <button type="button" class="address-next">Next</button>
               </div>
             </fieldset>
             <fieldset class="submitBox" id="submitBox">
               <legend>Your Order</legend>
               <p>Your order:</p>
-              <button type="submit" class="orderSubmit-btn">
+              <button type="submit" class="orderSubmit-btnLeft">
                 Submit Order
               </button>
             </fieldset>
@@ -319,6 +304,7 @@
       </div> -->
     </footer>
 
+    <script src="js/script.js"></script>
     <script src="js/menuToggle.js"></script>
     <script src="./js/email.js"></script>
 

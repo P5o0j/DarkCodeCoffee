@@ -593,17 +593,23 @@ input[type="range"] {
 .ground-style input {
   cursor: pointer; }
 
+.ground-img {
+  width: 30px; }
+
 .ground-style input[type="radio"] {
-  opacity: 0.011;
+  opacity: 0.5;
   z-index: 100; }
 
 .ground-style input[type="radio"]:checked + label {
-  background: #ffffff; }
+  outline: 1px solid #ffffff; }
 
 .ground-style label {
   cursor: pointer;
   z-index: 90;
   line-height: 1.8em; }
+
+.hide {
+  display: none; }
 
 @media only screen and (min-width: 768px) {
   .logo {
@@ -664,7 +670,10 @@ input[type="range"] {
   .popup {
     overflow-y: scroll !important;
     max-height: 800px;
-    width: 75%; } }
+    width: 75%; }
+
+  .ground-img {
+    width: 50px; } }
 /* end of media query */
 @media only screen and (min-width: 1140px) {
   .footer-one,
