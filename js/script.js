@@ -1,3 +1,4 @@
+// CREATE ADDRESS FORM
 document.getElementById("orderBtn").addEventListener("click", function () {
   const inputMessage = document.getElementById("message");
   inputMessage.removeAttribute("required");
@@ -74,4 +75,13 @@ document.getElementById("orderBtn").addEventListener("click", function () {
               <button type="button" class="address-next">Next</button>
             </fieldset>
     `;
+});
+
+// CREATE PRODUCT CHOICE
+
+// CREATE YOUR ORDER SECTION
+document.getElementById("productNext").addEventListener("click", function () {
+  // SHOW ORDERED PRODUCT
+  var code = document.getElementById("coffeeItem").value;
+  console.log(code);
 });

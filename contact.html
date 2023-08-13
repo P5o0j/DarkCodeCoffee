@@ -132,10 +132,12 @@
           <div class="form-row1" id="form-row2">
             <fieldset class="yourOrder" id="yourOrder">
               <legend>Choose Product</legend>
+
               <p>
                 <label for="coffeeItem"
                   >Choose your coffee:<br />
                   <select name="coffeeItem" id="coffeeItem">
+                    <option value="0000">--CHOOSE YOUR COFFEE--</option>
                     <option value="dcc011">404</option>
                     <option value="dcc009">Black Hat</option>
                     <option value="dcc006">Bug Fixing</option>
@@ -144,6 +146,7 @@
                     <option value="dcc013">Data Breach</option>
                     <option value="dcc012">DDoS</option>
                     <option value="dcc003">Firewall</option>
+                    <option value="dcc015">Malware</option>
                     <option value="dcc007">Pen Testing</option>
                     <option value="dcc010">Ransomware</option>
                     <option value="dcc004">Server Meltdown</option>
@@ -153,6 +156,7 @@
                   </select></label
                 ><br />
               </p>
+
               <p>
                 <label for="coffeeSize">
                   Weight:<br />
@@ -251,15 +255,17 @@
                     class="ground-img"
                 /></label>
               </div>
-              <div class="orderSubmit-btn">
+              <div class="orderSubmit-btnLeft">
                 <button type="reset">Reset</button>
-                <button type="button" class="address-next">Next</button>
+                <button type="button" class="address-next" id="productNext">
+                  Next
+                </button>
               </div>
             </fieldset>
             <fieldset class="submitBox" id="submitBox">
               <legend>Your Order</legend>
               <p>Your order:</p>
-              <button type="submit" class="orderSubmit-btnLeft">
+              <button type="submit" class="orderSubmit-btnRight">
                 Submit Order
               </button>
             </fieldset>
