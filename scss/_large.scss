@@ -39,7 +39,6 @@
 .form-row1,
 .form-row2 {
   display: flex;
-  justify-content: space-around;
 }
 .address,
 .submitBox {
@@ -65,4 +64,27 @@ input[type="text"] {
   position: absolute;
   bottom: 15px;
   right: 15px;
+}
+.tableVisible {
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 5px;
+  // border-top-left-radius: 5px;
+}
+.tableVisible2 {
+  border: 4px solid white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+td {
+  width: 33%;
+}
+.submitBox {
+  // display: grid;
+  // flex-direction: row;
+  // justify-content: center;
+  // align-content: center;
+  align-items: center;
+  // width: 100%;
 }

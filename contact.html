@@ -262,34 +262,38 @@
                 </button>
               </div>
             </fieldset>
-            <fieldset class="submitBox" id="submitBox">
+
+            <fieldset id="submitBox" class="submitBox">
               <legend>Your Order</legend>
               <!-- <p>Your order:</p> -->
-              <table class="table4">
-                <tr>
-                  <td></td>
-                  <td class="tableVisible">Order number</td>
-                  <td class="tableVisible" id="orderNumber">ORDER</td>
-                </tr>
-                <tr>
-                  <td colspan="2" class="tableVisible">ITEM</td>
 
-                  <td class="tableVisible">PRICE</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td class="tableVisible">POSTAGE</td>
-                  <td class="tableVisible">PRICE</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td class="tableVisible2">TOTAL</td>
-                  <td class="tableVisible2">AMOUNT</td>
-                </tr>
-              </table>
-              <button type="submit" class="orderSubmit-btnRight">
-                Submit Order
-              </button>
+              <div class="orderFinal">
+                <table class="table4">
+                  <tr>
+                    <td></td>
+                    <td class="tableVisible">Order number</td>
+                    <td class="tableVisible" id="orderNumber">ORDER</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="tableVisible">ITEM</td>
+
+                    <td class="tableVisible">PRICE</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td class="tableVisible">POSTAGE</td>
+                    <td class="tableVisible">PRICE</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td class="tableVisible2">TOTAL</td>
+                    <td class="tableVisible2">AMOUNT</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="orderSubmit-btnRight">
+                <button type="submit">Submit Order</button>
+              </div>
             </fieldset>
           </div>
         </form>
