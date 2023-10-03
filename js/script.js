@@ -79,8 +79,30 @@ document.getElementById("orderBtn").addEventListener("click", function () {
 
 // CREATE PRODUCT CHOICE
 
+// DISABLE 500g
+function disableFive() {
+  var coffeeDrop = document.getElementById("coffeeItem").value;
+  var weightFive = document.getElementById("weight500");
+  var weightFiveID = document.getElementById("weight500ID");
+  if (coffeeDrop === "dcc011") {
+    weightFiveID.style.opacity = "0.2";
+    weightFive.style.opacity = "0.2";
+    weightFiveID.style.textDecoration = "line-through";
+    weightFive.disabled = true;
+  } else {
+    weightFive.disabled = false;
+    weightFiveID.style.textDecoration = "none";
+    weightFiveID.style.opacity = "1";
+    weightFive.style.opacity = "1";
+  }
+}
+
 // CREATE YOUR ORDER SECTION
 document.getElementById("productNext").addEventListener("click", function () {
+  // GENERATE ORDER NUMBER
+  const orderNo = Math.floor(Math.random() * 10000);
+  document.getElementById("orderNumber").textContent = orderNo;
+
   // SHOW ORDERED PRODUCT
   var code = document.getElementById("coffeeItem").value;
   console.log(code);

@@ -136,7 +136,11 @@
               <p>
                 <label for="coffeeItem"
                   >Choose your coffee:<br />
-                  <select name="coffeeItem" id="coffeeItem">
+                  <select
+                    name="coffeeItem"
+                    id="coffeeItem"
+                    onchange="disableFive()"
+                  >
                     <option value="0000">--CHOOSE YOUR COFFEE--</option>
                     <option value="dcc011">404</option>
                     <option value="dcc009">Black Hat</option>
@@ -173,7 +177,7 @@
                     id="weight500"
                     value="500"
                   />
-                  <label for="weight500">500g</label>
+                  <label for="weight500" id="weight500ID">500g</label>
                   <input
                     type="radio"
                     name="weight"

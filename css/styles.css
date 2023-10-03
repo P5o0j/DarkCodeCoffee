@@ -604,6 +604,58 @@ input[type="range"] {
 .hide {
   display: none; }
 
+.form-row1,
+.form-row2 {
+  display: flex; }
+
+.address,
+.submitBox {
+  text-align: right; }
+
+fieldset {
+  height: 380px;
+  width: 49%;
+  position: relative;
+  padding: 15px; }
+
+input[type="text"] {
+  width: 75%; }
+
+.orderSubmit-btnLeft {
+  position: absolute;
+  bottom: 15px;
+  left: 15px; }
+
+.orderSubmit-btnRight {
+  position: absolute;
+  bottom: 15px;
+  right: 15px; }
+
+.tableVisible {
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 5px; }
+
+.tableVisible2 {
+  border: 4px solid white;
+  padding: 5px;
+  border-radius: 5px; }
+
+td {
+  width: 33%; }
+
+.submitBox {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center; }
+
+.orderFinal {
+  width: 100%; }
+
+.table4 {
+  width: 100%; }
+
 @media only screen and (min-width: 768px) {
   .logo {
     width: 350px; }
@@ -698,50 +750,7 @@ input[type="range"] {
 
   /* Style the card */
   .popup {
-    width: 50%; }
-
-  .form-row1,
-  .form-row2 {
-    display: flex; }
-
-  .address,
-  .submitBox {
-    text-align: right; }
-
-  fieldset {
-    height: 380px;
-    width: 49%;
-    position: relative;
-    padding: 15px; }
-
-  input[type="text"] {
-    width: 75%; }
-
-  .orderSubmit-btnLeft {
-    position: absolute;
-    bottom: 15px;
-    left: 15px; }
-
-  .orderSubmit-btnRight {
-    position: absolute;
-    bottom: 15px;
-    right: 15px; }
-
-  .tableVisible {
-    border: 1px solid white;
-    padding: 5px;
-    border-radius: 5px; }
-
-  .tableVisible2 {
-    border: 4px solid white;
-    padding: 5px;
-    border-radius: 5px; }
-
-  td {
-    width: 33%; }
-
-  .submitBox {
-    align-items: center; } }
+    width: 50%; } }
 /* end of media query */
 
 /*# sourceMappingURL=styles.css.map */
