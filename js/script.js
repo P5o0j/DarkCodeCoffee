@@ -129,11 +129,25 @@ document.getElementById("productNext").addEventListener("click", function () {
   document.getElementById(
     "orderedItem"
   ).textContent = `${selectedItem} Coffee ${selectedWeight}g ${selectedGrind}`;
+
   // GET PRICE
+  var itemPrice = 0;
+  if (selectedWeight == 250) {
+    itemPrice = 9.99;
+  } else if (selectedWeight == 500) {
+    itemPrice = 14.99;
+  } else if (selectedWeight == 1000) {
+    itemPrice = 24.99;
+  }
+  document.getElementById("price").textContent = `£${itemPrice}`;
 
   // GET POSTAGE
-  document.getElementById("postage").textContent = "£2.99";
+  const postagePrice = 2.99;
+  document.getElementById("postage").textContent = `£${postagePrice}`;
+
   // CALCULATE TOTAL
+  var totalPrice = itemPrice + postagePrice;
+  document.getElementById("total").textContent = `£${totalPrice}`;
 
   // SHOW ORDERED PRODUCT
   var code = document.getElementById("coffeeItem").value;
