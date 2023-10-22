@@ -84,7 +84,18 @@ function disableFive() {
   var coffeeDrop = document.getElementById("coffeeItem").value;
   var weightFive = document.getElementById("weight500");
   var weightFiveID = document.getElementById("weight500ID");
-  if (coffeeDrop === "dcc011") {
+  const noFive = [
+    "dcc008",
+    "dcc009",
+    "dcc010",
+    "dcc011",
+    "dcc012",
+    "dcc013",
+    "dcc014",
+    "dcc015",
+  ];
+  // if (coffeeDrop === "dcc011") {
+  if (noFive.includes(coffeeDrop)) {
     weightFiveID.style.opacity = "0.2";
     weightFive.style.opacity = "0.2";
     weightFiveID.style.textDecoration = "line-through";
@@ -101,7 +112,28 @@ function disableFive() {
 document.getElementById("productNext").addEventListener("click", function () {
   // GENERATE ORDER NUMBER
   const orderNo = Math.floor(Math.random() * 10000);
-  document.getElementById("orderNumber").textContent = orderNo;
+  document.getElementById("orderNumber").textContent = orderNo
+    .toString()
+    .padStart(4, "0");
+
+  // GET ITEM
+  var dropdown = document.getElementById("coffeeItem");
+  var selectedItem = dropdown.options[dropdown.selectedIndex].text;
+  var selectedWeight = document.querySelector(
+    'input[name="weight"]:checked'
+  ).value;
+  var selectedGrind = document.querySelector(
+    'input[name="ground"]:checked'
+  ).value;
+  // console.log(selectedGrind);
+  document.getElementById(
+    "orderedItem"
+  ).textContent = `${selectedItem} Coffee ${selectedWeight}g ${selectedGrind}`;
+  // GET PRICE
+
+  // GET POSTAGE
+  document.getElementById("postage").textContent = "£2.99";
+  // CALCULATE TOTAL
 
   // SHOW ORDERED PRODUCT
   var code = document.getElementById("coffeeItem").value;
