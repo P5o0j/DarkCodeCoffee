@@ -20,8 +20,8 @@ document.getElementById("orderBtn").addEventListener("click", function () {
                   >Address<br />
                   <input
                     type="text"
-                    name="address"
-                    id="add1"
+                    name="address1"
+                    id="address1"
                     required
                     minlength="3"
                     maxlength="35"
@@ -30,7 +30,7 @@ document.getElementById("orderBtn").addEventListener("click", function () {
               <p>
                 <label for="address2"
                   >Address<br />
-                  <input type="text" name="address2" id="add2"
+                  <input type="text" name="address2" id="address2"
                 /></label>
               </p>
               <p>
@@ -72,7 +72,7 @@ document.getElementById("orderBtn").addEventListener("click", function () {
               </p>
 
               <button type="reset">Reset</button>
-              <button type="button" class="address-next">Next</button>
+              <button type="button" class="address-next" id="nextBtn1">Next</button>
             </fieldset>
     `;
 });
