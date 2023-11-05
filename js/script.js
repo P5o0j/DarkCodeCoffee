@@ -326,8 +326,8 @@ function yourOrderBox() {
   const msgReset3 = document.getElementById("messageReset3");
   msgReset3.style.display = "none";
 
-  const msgNext2 = document.getElementById("productNext");
-  msgNext2.style.display = "none";
+  // const msgNext2 = document.getElementById("productNext");
+  // msgNext2.style.display = "none";
 
   // create element
 
