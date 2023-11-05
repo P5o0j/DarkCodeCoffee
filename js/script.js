@@ -13,7 +13,7 @@ document.getElementById("orderBtn").addEventListener("click", function () {
   msgOrder.style.display = "none";
 
   document.getElementById("form-row1").innerHTML += `
-    <fieldset class="address" id="address">
+  <fieldset class="address" id="address">
               <legend>Address</legend>
               <p>
                 <label for="address"
@@ -71,13 +71,225 @@ document.getElementById("orderBtn").addEventListener("click", function () {
                 /></label>
               </p>
 
-              <button type="reset">Reset</button>
-              <button type="button" class="address-next" id="nextBtn1">Next</button>
+              <button type="reset" id="messageReset2">Reset</button>
+              <button type="button" class="address-next" id="nextBtn1" onClick="productChoice()">Next</button>
             </fieldset>
     `;
 });
 
 // CREATE PRODUCT CHOICE
+function productChoice() {
+  // hide buttons
+  const msgReset2 = document.getElementById("messageReset2");
+  msgReset2.style.display = "none";
+
+  const msgNext = document.getElementById("nextBtn1");
+  msgNext.style.display = "none";
+
+  document.getElementById("form-row2").innerHTML += `
+  <fieldset class="yourOrder" id="yourOrder">
+              <legend>Choose Product</legend>
+
+              <p>
+                <label for="coffeeItem"
+                  >Choose your coffee:<br />
+                  <select
+                    name="coffeeItem"
+                    id="coffeeItem"
+                    
+                    onchange="disableFive()"
+                  >
+                    <option value="0000">--CHOOSE YOUR COFFEE--</option>
+                    <option value="dcc011" >404</option>
+                    <option value="dcc009" >Black Hat</option>
+                    <option value="dcc006" >Bug Fixing</option>
+                    <option value="dcc008" >Corrupted Database</option>
+                    <option value="dcc005" >Cybersecurity</option>
+                    <option value="dcc013" >Data Breach</option>
+                    <option value="dcc012" >DDoS</option>
+                    <option value="dcc003" >Firewall</option>
+                    <option value="dcc015" >Malware</option>
+                    <option value="dcc007" >Pen Testing</option>
+                    <option value="dcc010" >Ransomware</option>
+                    <option value="dcc004" >Server Meltdown</option>
+                    <option value="dcc001" >Source Code</option>
+                    <option value="dcc014" >System Failure</option>
+                    <option value="dcc002" >White Hat</option>
+                  </select></label
+                ><br />
+              </p>
+
+              <p>
+                <label for="coffeeSize">
+                  Weight:<br />
+                  <input
+                    type="radio"
+                    name="weight"
+                    id="weight250"
+                    value="250"
+                    required
+                  />
+                  <label for="weight250">250g</label>
+                  <input
+                    type="radio"
+                    name="weight"
+                    id="weight500"
+                    value="500"
+                    required
+                  />
+                  <label for="weight500" id="weight500ID">500g</label>
+                  <input
+                    type="radio"
+                    name="weight"
+                    id="weight1k"
+                    value="1000"
+                    required
+                  />
+                  <label for="weight1k">1000g</label>
+                </label>
+              </p>
+              <p>
+                <label for="groundStyle">Grind Style: <br /> </label>
+              </p>
+
+              <div class="ground-style">
+                <input
+                  type="radio"
+                  name="ground"
+                  id="beans"
+                  value="roasted coffee beans"
+                  class="ground"
+                  required
+                />
+                <label for="beans" title="Roasted coffee beans"
+                  ><img
+                    src="./img/coffee-beans.png"
+                    alt="Roasted coffee beans"
+                    class="ground-img"
+                /></label>
+
+                <input
+                  type="radio"
+                  name="ground"
+                  id="espresso"
+                  value="grounded for espresso"
+                  class="ground"
+                  required
+                />
+                <label for="espresso" title="Ground for espresso"
+                  ><img
+                    src="./img/coffee-machine.png"
+                    alt="Ground for espresso"
+                    class="ground-img"
+                /></label>
+                <input
+                  type="radio"
+                  name="ground"
+                  id="pods"
+                  value="grounded for pods"
+                  class="ground"
+                  required
+                />
+                <label for="pods" title="Ground for pods"
+                  ><img
+                    src="./img/pod.png"
+                    alt="Ground for pods"
+                    class="ground-img"
+                /></label>
+                <input
+                  type="radio"
+                  name="ground"
+                  id="aeropress"
+                  value="grounded for aeropress"
+                  class="ground"
+                  required
+                />
+                <label for="aeropress" title="Ground for aeropress"
+                  ><img
+                    src="./img/drip-glass.png"
+                    alt="Ground for aeropress"
+                    class="ground-img"
+                /></label>
+                <input
+                  type="radio"
+                  name="ground"
+                  id="cafetiere"
+                  value="grounded for cafetiere"
+                  class="ground"
+                  required
+                />
+                <label for="cafetiere" title="Ground for cafetiere"
+                  ><img
+                    src="./img/french-press.png"
+                    alt="Ground for cafetiere"
+                    class="ground-img"
+                /></label>
+              </div>
+              <div class="orderSubmit-btnLeft">
+                <button type="reset" id="messageReset3">Reset</button>
+                <button type="button" class="address-next" id="productNext" onClick="yourOrderBox()">
+                  Next
+                </button>
+              </div>
+            </fieldset>
+  `;
+  document.getElementById("form-row2").innerHTML += `
+  <fieldset id="submitBox" class="submitBox hideMe">
+              <legend>Your Order</legend>
+              <!-- <p>Your order:</p> -->
+
+              <div class="orderFinal">
+                <table class="table4">
+                  <tr>
+                    <td></td>
+                    <td class="tableVisible">ORDER NUMBER</td>
+                    <td
+                      class="tableVisible"
+                      id="orderNumber"
+                      name="orderNumber"
+                      onLoad="genOrderNum()"
+                    >
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      colspan="2"
+                      class="tableVisible"
+                      id="orderedItem"
+                      name="orderedItem"
+                    >
+                      ITEM
+                    </td>
+
+                    <td class="tableVisible" id="price"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td class="tableVisible">POSTAGE</td>
+                    <td class="tableVisible" id="postage"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td class="tableVisible2">TOTAL</td>
+                    <td class="tableVisible2" id="total"></td>
+                  </tr>
+                </table>
+                <p>
+                  To confirm your order make a payment using below bank details
+                  using order number as reference<br />
+                  Sebastian Kolenderski<br />
+                  Sort Code: 04-29-09<br />
+                  Account Number: 04841948
+                </p>
+              </div>
+              <div class="orderSubmit-btnRight">
+              <button type="reset" >Reset</button>
+                <button type="submit" id="messageSend">Submit Order</button>
+              </div>
+            </fieldset>
+  `;
+}
 
 // DISABLE 500g
 function disableFive() {
@@ -109,8 +321,18 @@ function disableFive() {
 }
 
 // CREATE YOUR ORDER SECTION
-document.getElementById("productNext").addEventListener("click", function () {
+function yourOrderBox() {
+  // hide buttons
+  const msgReset3 = document.getElementById("messageReset3");
+  msgReset3.style.display = "none";
+
+  const msgNext2 = document.getElementById("productNext");
+  msgNext2.style.display = "none";
+
+  // create element
+
   // GENERATE ORDER NUMBER
+
   const orderNo = Math.floor(Math.random() * 10000);
   document.getElementById("orderNumber").textContent = orderNo
     .toString()
@@ -147,9 +369,13 @@ document.getElementById("productNext").addEventListener("click", function () {
 
   // CALCULATE TOTAL
   var totalPrice = itemPrice + postagePrice;
-  document.getElementById("total").textContent = `£${totalPrice}`;
+  document.getElementById("total").textContent = `£${totalPrice.toFixed(2)}`;
 
   // SHOW ORDERED PRODUCT
   var code = document.getElementById("coffeeItem").value;
-  console.log(code);
-});
+  // console.log(code);
+
+  // SHOW BOX
+  var hideMeBox = document.getElementById("submitBox");
+  hideMeBox.classList.remove("hideMe");
+}

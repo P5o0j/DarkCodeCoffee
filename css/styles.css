@@ -421,13 +421,6 @@ main {
     opacity: 0; }
   100% {
     opacity: 1; } }
-fieldset {
-  width: 100%;
-  border-radius: 15px; }
-
-textarea {
-  max-width: 100%; }
-
 .footer-container {
   margin-top: auto;
   display: flex;
@@ -572,6 +565,20 @@ textarea {
   font-size: 0.8em;
   text-align: left; }
 
+fieldset {
+  width: 90%;
+  border-radius: 15px;
+  position: relative;
+  padding: 15px; }
+
+textarea {
+  max-width: 100%; }
+
+.form-row1,
+.form-row2 {
+  display: flex;
+  flex-direction: column; }
+
 option {
   padding: 0; }
 
@@ -604,30 +611,18 @@ input[type="range"] {
 .hide {
   display: none; }
 
-.form-row1,
-.form-row2 {
-  display: flex; }
-
 .address,
 .submitBox {
   text-align: right; }
-
-fieldset {
-  height: 380px;
-  width: 49%;
-  position: relative;
-  padding: 15px; }
 
 input[type="text"] {
   width: 75%; }
 
 .orderSubmit-btnLeft {
-  position: absolute;
   bottom: 15px;
   left: 15px; }
 
 .orderSubmit-btnRight {
-  position: absolute;
   bottom: 15px;
   right: 15px; }
 
@@ -646,15 +641,22 @@ td {
 
 .submitBox {
   display: flex;
-  flex-direction: row;
-  align-content: center;
-  align-items: center; }
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-end; }
 
 .orderFinal {
   width: 100%; }
 
 .table4 {
   width: 100%; }
+
+.disabledRadio {
+  text-decoration: line-through;
+  opacity: 0.5; }
+
+.hideMe {
+  visibility: hidden; }
 
 @media only screen and (min-width: 768px) {
   .logo {
@@ -718,7 +720,20 @@ td {
     width: 75%; }
 
   .ground-img {
-    width: 50px; } }
+    width: 50px; }
+
+  fieldset {
+    max-width: 49%;
+    position: relative;
+    padding: 15px; }
+
+  textarea {
+    max-width: 100%; }
+
+  .form-row1,
+  .form-row2 {
+    display: flex;
+    flex-direction: row; } }
 /* end of media query */
 @media only screen and (min-width: 1140px) {
   .footer-one,

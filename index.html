@@ -1241,52 +1241,61 @@
       </div>
 
       <!-- CONTACT FORM -->
-      <div id="contact">
+      <div class="form">
+        <!-- CONTACT FORM -->
         <form id="myForm" method="POST" enctype="text/plain" name="FormData">
-          <fieldset>
-            <legend>Contact Us</legend>
+          <div class="form-row1" id="form-row1">
+            <fieldset class="contactForm" id="contactForm">
+              <legend>Contact Us</legend>
+              <p>
+                <label for="name"
+                  >Name<br />
+                  <input
+                    type="name"
+                    name="name"
+                    id="name"
+                    required
+                    minlength="3"
+                    maxlength="35"
+                /></label>
+              </p>
+              <p>
+                <label for="phone"
+                  >Phone Number<br />
+                  <input type="tel" id="phone" name="phone"
+                /></label>
+              </p>
+              <p>
+                <label for="email"
+                  >Email Address<br />
+                  <input type="email" name="email" id="email" required
+                /></label>
+              </p>
+              <input type="hidden" name="source" value="ContactForm" />
+              <p>
+                <label for="message"
+                  >Message: <br />
+                  <textarea
+                    cols="25"
+                    rows="4"
+                    name="message"
+                    id="message"
+                    required
+                  ></textarea>
+                </label>
+              </p>
 
-            <p>
-              <label for="name"
-                >Name<br />
-                <input
-                  type="name"
-                  name="name"
-                  id="name"
-                  required
-                  minlength="3"
-                  maxlength="35"
-              /></label>
-            </p>
-            <p>
-              <label for="phone"
-                >Phone Number<br />
-                <input type="tel" id="phone" name="phone"
-              /></label>
-            </p>
-            <p>
-              <label for="email"
-                >Email Address<br />
-                <input type="email" name="email" id="email" required
-              /></label>
-            </p>
-            <input type="hidden" name="source" value="ContactForm" />
-            <p>
-              <label for="message"
-                >Message: <br />
-                <textarea
-                  cols="40"
-                  rows="4"
-                  name="message"
-                  id="message"
-                  required
-                ></textarea>
-              </label>
-            </p>
+              <button type="reset" id="messageReset">Reset</button>
+              <button type="submit" id="messageSend">Send</button>
+              <button id="orderBtn">Order</button>
+            </fieldset>
+          </div>
 
-            <button type="submit">Send</button>
-            <button type="reset">Reset</button>
-          </fieldset>
+          <div class="form-row1" id="form-row2">
+            <!-- CHOOSE PRODUCT  -->
+
+            <!-- SUBMIT BOX -->
+          </div>
         </form>
       </div>
       <!-- EDN OF CONTACT FORM -->
@@ -1337,6 +1346,7 @@
     ></script> -->
     <script src="js/menuToggle.js"></script>
     <script src="./js/email.js"></script>
+    <script src="js/script.js"></script>
 
     <script
       type="text/javascript"
